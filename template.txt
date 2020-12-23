@@ -1,9 +1,9 @@
 #### replace
-@       location ^~ /replace_prod_cdn/h5 {
-@               alias /home/nginx/web/replace/h5;
-@       }
-@
-@       location ^~ /replace_prod_cdn/pc {
-@               alias /home/nginx/web/replace/pc;
-@       }
+@@@@@@@@location ^~ /replace_prod_cdn/h5 {
+@@@@@@@@@@@@@@@@alias /home/nginx/web/replace/h5;
+@@@@@@@@}
+@@@@@@@@
+@@@@@@@@location ^~ /replace_prod_cdn/pc {
+@@@@@@@@@@@@@@@@alias /home/nginx/web/replace/pc;
+@@@@@@@@}
 }
