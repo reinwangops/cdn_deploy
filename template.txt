@@ -4,6 +4,6 @@
 @       }
 @
 @       location ^~ /replace_prod_cdn/pc {
-@               alias /home/nginx/web/replacel/pc;
+@               alias /home/nginx/web/replace/pc;
 @       }
 }
