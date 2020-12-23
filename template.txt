@@ -1,21 +1,9 @@
-server{
-@@@@@@@@server_name:@192.168.234.3;
-@@@@@@@@location / {
-@@@@@@@@}
-#### gtyl
-@@@@@@@@location@^~ /gtyl_prod_cdn/h5 {
-@@@@@@@@@@@@@@@@alias /home/nginx/web/gtyl/h5;
+#### replace
+@@@@@@@@location@^~ /replace_prod_cdn/h5 {
+@@@@@@@@@@@@@@@@alias /home/nginx/web/replace/h5;
 @@@@@@@@}
 
-@@@@@@@@location@^~ /gtyl_prod_cdn/pc {
-@@@@@@@@@@@@@@@@alias /home/nginx/web/gtyl/pc;
-@@@@@@@@}
-#### xingyun
-@@@@@@@@location@^~ /xingyun_prod_cdn/h5 {
-@@@@@@@@@@@@@@@@alias /home/nginx/web/xingyun/h5;
-@@@@@@@@}
-
-@@@@@@@@location@^~ /xingyun_prod_cdn/pc {
-@@@@@@@@@@@@@@@@alias /home/nginx/web/xingyun/pc;
+@@@@@@@@location@^~ /replace_prod_cdn/pc {
+@@@@@@@@@@@@@@@@alias /home/nginx/web/replacel/pc;
 @@@@@@@@}
 }
