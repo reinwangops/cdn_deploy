@@ -3,13 +3,13 @@
 #SRC_PATH=/home/development/front
 SRC_PATH=/home/development/new_h5/replace_prod
 PRD_PATH=/home/nginx/web/replace
-PKG_NAME=distcdn.zip
-SRC_NAME=distcdn
+PKG_NAME=cdndist.zip
+SRC_NAME=dist
 tartime=`date "+%Y%m%d_%H%M%S"`
 
 #check backup dir
-if [ ! -d "$SRC_PATH/h5_backup" ]; then
-  mkdir $SRC_PATH/h5_backup
+if [ ! -d "$SRC_PATH/pc_backup" ]; then
+  mkdir $SRC_PATH/pc_backup
 fi
 
 #check nginx dir
@@ -18,13 +18,13 @@ if [ ! -d "$PRD_PATH" ]; then
 fi
 
 #copy && backup
-cp -rf $SRC_PATH/$PKG_NAME $PRD_PATH
-cp -rf $SRC_PATH/$PKG_NAME $SRC_PATH/h5_backup/$PKG_NAME\_$tartime
+\cp -rf $SRC_PATH/$PKG_NAME $PRD_PATH
+\cp -rf $SRC_PATH/$PKG_NAME $SRC_PATH/pc_backup/$PKG_NAME\_$tartime
 
 #rollbackneed && update
 cd $PRD_PATH
-rm -rf bk-h5
-mv h5 bk-h5
+rm -rf bk-pc
+\mv -f pc bk-pc
 unzip $PKG_NAME
-mv $SRC_NAME h5
-rm -rf  h5/index.html
+\mv -f $SRC_NAME pc
+rm -rf  pc/index.html
