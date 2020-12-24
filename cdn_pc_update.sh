@@ -18,13 +18,13 @@ if [ ! -d "$PRD_PATH" ]; then
 fi
 
 #copy && backup
-cp -rf $SRC_PATH/$PKG_NAME $PRD_PATH
-cp -rf $SRC_PATH/$PKG_NAME $SRC_PATH/pc_backup/$PKG_NAME\_$tartime
+\cp -rf $SRC_PATH/$PKG_NAME $PRD_PATH
+\cp -rf $SRC_PATH/$PKG_NAME $SRC_PATH/pc_backup/$PKG_NAME\_$tartime
 
 #rollbackneed && update
 cd $PRD_PATH
 rm -rf bk-pc
-mv pc bk-pc
+\mv -f pc bk-pc
 unzip $PKG_NAME
-mv $SRC_NAME pc
+\mv -f $SRC_NAME pc
 rm -rf  pc/index.html
